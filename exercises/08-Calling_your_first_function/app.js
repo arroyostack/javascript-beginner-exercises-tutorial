@@ -4,4 +4,6 @@ function isOdd(myNumber)
 }
 
 // Your code below:
-isOdd()
+const printIsOdd = isOdd(45345)
+
+console.log(printIsOdd)

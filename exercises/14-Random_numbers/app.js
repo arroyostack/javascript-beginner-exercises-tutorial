@@ -1,10 +1,8 @@
 /*Exercise closely resembles 10 - consider introducing another concept here? */
 
-function getRandomInt()
-{
-	let randomNumber = Math.random();
-	return randomNumber;
-}
+const getRandomInt = () => Math.floor(Math.random() * 10);
+
 
 
 console.log(getRandomInt());
+

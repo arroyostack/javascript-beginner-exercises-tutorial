@@ -16,16 +16,35 @@ var person2 = {
     significant_other: person
 };
 
+const person3 = {
+    name: "Jimmy",
+    lastname: "Doe",
+    age: 13,
+    gender: "male",
+    lucky_numbers: [ 1, 2, 3, 4],
+    significant_other: null
+}
+
 var family = {
     lastname: "Doe",
     members: [person, person2]   //Array of objects, don't forget to add Jimmy
 };
 
+family.members.push(person3);
 
-function addAllFamilyLuckyNumbers(anArray){
+person.lucky_numbers[3] = 33;
+
+
+function addAllFamilyLuckyNumbers(arr){
   let sumOfAllLuckyNumbers = 0; //sumOfAllLuckyNumbers is a number, the sum of all lucky numbers.
 
   //To-Do: loop and add; consider nested loops
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let y = 0; y < arr[i].lucky_numbers.length; y++) {
+        sumOfAllLuckyNumbers += arr[i].lucky_numbers[y];
+    }
+}
   //Hint: use the anArray variable to get all of the lucky numbers
   
   return sumOfAllLuckyNumbers;
